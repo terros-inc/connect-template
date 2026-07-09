@@ -1,23 +1,24 @@
 {
-  "name": "connect-template",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "packageManager": "pnpm@11.10.0+sha512.0b7f8b98060031904c017e3a41eb187a16d40eeb829b95c4f8cb03681761fc4ab53dd219115b9b447f4dce1a05a214764461e7d3703392a9f32f9511ce8c86c8",
+  "author": "Terros Inc.",
   "dependencies": {
     "@terros-inc/sdk": "^1.0.1"
   },
+  "description": "",
   "devDependencies": {
     "@types/node": "^24.13.3",
     "oxfmt": "^0.58.0",
     "oxlint": "^1.73.0",
     "typescript": "^7.0.2",
     "vitest": "^4.1.10"
-  }
+  },
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "connect-template",
+  "packageManager": "pnpm@11.10.0+sha512.0b7f8b98060031904c017e3a41eb187a16d40eeb829b95c4f8cb03681761fc4ab53dd219115b9b447f4dce1a05a214764461e7d3703392a9f32f9511ce8c86c8",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "version": "1.0.0"
 }
