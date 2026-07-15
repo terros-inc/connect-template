@@ -7,6 +7,7 @@ jobs:
     name: Publish Connect scripts
     timeout-minutes: 5
     runs-on: ubuntu-latest
+    environment: terros
     steps:
       - name: Check out code
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
@@ -26,4 +27,6 @@ jobs:
         run: pnpm build
 
       - name: Publish
+        env:
+          TERROS_API_KEY: ${{ secrets.TERROS_API_KEY }}
         run: pnpm terros connect publish
