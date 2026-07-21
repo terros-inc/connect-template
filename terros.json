@@ -1,0 +1,14 @@
+{
+  "appId": "",
+  "scripts": [
+    {
+      "name": "Account outgoing",
+      "type": "outgoing",
+      "dataType": "Account",
+      "entrypoint": "src/accountOutgoing.ts",
+      "authSchema": {},
+      "configSchema": [],
+      "permissions": []
+    }
+  ]
+}
