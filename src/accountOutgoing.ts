@@ -1,6 +1,5 @@
-import { TerrosClient } from '@terros-inc/sdk'
+import { type CompanyWebhook, wrapConnectHandler } from '@terros-inc/sdk'
 
-export async function handler(): Promise<void> {
-  const client = new TerrosClient()
-  await client.user.profile()
-}
+export const handler = wrapConnectHandler<CompanyWebhook>(async (input, client) => {
+  // TODO write integration code here
+})

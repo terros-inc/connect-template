@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@terros-inc/sdk':
-        specifier: ^1.0.8
-        version: 1.0.8
+        specifier: ^1.0.9
+        version: 1.0.9
     devDependencies:
       '@terros-inc/cli':
         specifier: ^1.0.14
@@ -664,8 +664,8 @@ packages:
     engines: {node: '>=24'}
     hasBin: true
 
-  '@terros-inc/sdk@1.0.8':
-    resolution: {integrity: sha512-KSNahWgM6RpqXV7fcpqoG9VM7dZaozrjLYgjp92ARAX05qPmPC24tMuYLLkGJS7Y2VKbKa5Be+Vi1GWxJ6Y9cA==}
+  '@terros-inc/sdk@1.0.9':
+    resolution: {integrity: sha512-BkxmCNgnnqxAVqOl6Qd6KFk828QkViNTkN2JNwpXZ07Ms9Ab3A5rUiszUYwx8FK2QLpJbHgcIKQGcLS0LsSOwQ==}
     engines: {node: ^24}
 
   '@tybys/wasm-util@0.10.3':
@@ -1561,7 +1561,7 @@ snapshots:
       yaml: 2.9.0
       zod: 4.4.3
 
-  '@terros-inc/sdk@1.0.8': {}
+  '@terros-inc/sdk@1.0.9': {}
 
   '@tybys/wasm-util@0.10.3':
     dependencies:
