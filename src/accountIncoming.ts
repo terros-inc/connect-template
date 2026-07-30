@@ -16,6 +16,11 @@ export type SampleIncomingLeadPayload = {
 export const handler = wrapConnectHandler<SampleIncomingLeadPayload, AccountUpsertSuccess>(async (input, client) => {
   const lead = input.context.payload
 
+  if (!lead.externalLeadId) {
+    console.log('Incoming lead is missing an externalLeadId, skipping upsert')
+    return { type: 'success' }
+  }
+
   const upsertInput: AccountUpsertInput = {
     account: {
       externalLeadId: lead.externalLeadId,
