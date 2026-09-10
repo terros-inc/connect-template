@@ -4,7 +4,7 @@ blockExoticSubdeps: true
 minimumReleaseAge: 1440
 minimumReleaseAgeExclude:
   - '@terros-inc/*'
-packageManagerStrictVersion: true
 trustPolicy: no-downgrade
 updateNotifier: false
+pmOnFail: error
 verifyDepsBeforeRun: warn
