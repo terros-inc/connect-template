@@ -1,8 +1,12 @@
-import { type AccountData, type UserGetSuccess, type WebhookPayload, wrapConnectHandler } from '@terros-inc/sdk'
+import { type AccountData, type WebhookPayload, wrapConnectHandler } from '@terros-inc/sdk'
 
 export type AccountWebhook = WebhookPayload<'Account', AccountData, 'accountId'>
 
-export const handler = wrapConnectHandler<AccountWebhook>(async (input, client) => {
+type Config = {
+
+}
+
+export const handler = wrapConnectHandler<AccountWebhook, void, Config>(async (input, client) => {
   const { payload } = input.context
 
   if (payload.action === 'remove') {
@@ -17,6 +21,6 @@ export const handler = wrapConnectHandler<AccountWebhook>(async (input, client) 
     return
   }
 
-  const { user } = await client.call<UserGetSuccess>('user/get', { userId: account.ownerId })
+  const { user } = await client.user.get({ userId: account.ownerId })
   console.log(`Account ${account.accountId} is owned by ${user.firstName} ${user.lastName}`)
 })

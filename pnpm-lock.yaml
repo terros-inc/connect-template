@@ -167,12 +167,12 @@ importers:
   .:
     dependencies:
       '@terros-inc/sdk':
-        specifier: ^1.0.9
-        version: 1.0.9
+        specifier: ^1.0.17
+        version: 1.0.17
     devDependencies:
       '@terros-inc/cli':
-        specifier: ^1.0.14
-        version: 1.0.14
+        specifier: ^1.0.23
+        version: 1.0.23
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
@@ -364,6 +364,14 @@ packages:
 
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
+
+  '@modelcontextprotocol/core@2.2.0':
+    resolution: {integrity: sha512-iLhmprRmWI8EcosOA3wVvww22z02NkgqhV4fBH6f/odQBsi7xnJc0HGmi21yWO+/iKw2yzqVE127Zhna5/+JXw==}
+    engines: {node: '>=20'}
+
+  '@modelcontextprotocol/server@2.2.0':
+    resolution: {integrity: sha512-qFnltjus6Gk8Lx6J1w2RXmr3YPN22MNT6qD6zjAkaiWIlFIFxWClz0rXHNuJF/KSUyn5YGhkSvXkWDbQHVLFEQ==}
+    engines: {node: '>=20'}
 
   '@napi-rs/wasm-runtime@1.1.6':
     resolution: {integrity: sha512-ZLv/JdUfkvOy9eCnnBaGfiO+XimbjebAeO+MRQqD/B+FR1tnRN0tpKSJHRbE8sFfS6aqsXZ67TQjfwfsxULVbg==}
@@ -817,13 +825,13 @@ packages:
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
 
-  '@terros-inc/cli@1.0.14':
-    resolution: {integrity: sha512-WT1rDtmMQl2praWI72fi7nhCY8obvSCzMZJ0rWYWLhqfY7Qf0xgMSwYecw+Cx8r5Hzob4ijRHxogn9BdsQvhzA==}
+  '@terros-inc/cli@1.0.23':
+    resolution: {integrity: sha512-6zxKEusWKzCebMl+2bqA2iT9jowaYn/VuUdWsweBK3RwTcI8G6WUSMo09zEfSCu6gNf0eil8ILlwpmDRmF7Fkw==}
     engines: {node: '>=24'}
     hasBin: true
 
-  '@terros-inc/sdk@1.0.9':
-    resolution: {integrity: sha512-BkxmCNgnnqxAVqOl6Qd6KFk828QkViNTkN2JNwpXZ07Ms9Ab3A5rUiszUYwx8FK2QLpJbHgcIKQGcLS0LsSOwQ==}
+  '@terros-inc/sdk@1.0.17':
+    resolution: {integrity: sha512-4PKYPSGyKCQDAVWeRXXC2MSzNTPCgQLXhmGgTp0fGcQ0nC2eKcAy8o76E5bg7glGmT3tDeplHpkt3ohvNwriGw==}
     engines: {node: ^24}
 
   '@tybys/wasm-util@0.10.3':
@@ -1476,6 +1484,15 @@ snapshots:
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
+  '@modelcontextprotocol/core@2.2.0':
+    dependencies:
+      zod: 4.4.3
+
+  '@modelcontextprotocol/server@2.2.0':
+    dependencies:
+      '@modelcontextprotocol/core': 2.2.0
+      zod: 4.4.3
+
   '@napi-rs/wasm-runtime@1.1.6(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)':
     dependencies:
       '@emnapi/core': 1.11.1
@@ -1710,8 +1727,9 @@ snapshots:
 
   '@standard-schema/spec@1.1.0': {}
 
-  '@terros-inc/cli@1.0.14':
+  '@terros-inc/cli@1.0.23':
     dependencies:
+      '@modelcontextprotocol/server': 2.2.0
       luxon: 3.7.2
       minimist: 1.2.8
       open: 11.0.0
@@ -1719,7 +1737,7 @@ snapshots:
       yaml: 2.9.0
       zod: 4.4.3
 
-  '@terros-inc/sdk@1.0.9': {}
+  '@terros-inc/sdk@1.0.17': {}
 
   '@tybys/wasm-util@0.10.3':
     dependencies:

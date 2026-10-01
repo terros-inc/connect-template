@@ -13,7 +13,11 @@ export type SampleIncomingLeadPayload = {
   }
 }
 
-export const handler = wrapConnectHandler<SampleIncomingLeadPayload, AccountUpsertSuccess>(async (input, client) => {
+type Config = {
+
+}
+
+export const handler = wrapConnectHandler<SampleIncomingLeadPayload, AccountUpsertSuccess, Config>(async (input, client) => {
   const lead = input.context.payload
 
   if (!lead.externalLeadId) {
@@ -38,7 +42,7 @@ export const handler = wrapConnectHandler<SampleIncomingLeadPayload, AccountUpse
     },
   }
 
-  const result = await client.call<AccountUpsertSuccess>('account/upsert', upsertInput)
+  const result = await client.account.upsert(upsertInput)
   console.log(`Upserted account ${result.account?.accountId} from lead ${lead.externalLeadId}`)
   return result
 })
