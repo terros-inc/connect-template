@@ -9,6 +9,14 @@
       "authSchema": {},
       "configSchema": [],
       "permissions": []
+    },
+    {
+      "name": "Account incoming",
+      "type": "incoming",
+      "entrypoint": "src/accountIncoming.ts",
+      "authSchema": {},
+      "configSchema": [],
+      "permissions": []
     }
   ]
 }
