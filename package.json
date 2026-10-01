@@ -5,12 +5,12 @@
   },
   "description": "",
   "devDependencies": {
-    "@terros-inc/cli": "^1.0.23",
+    "@terros-inc/cli": "^1.0.24",
     "@types/node": "^24.13.3",
     "oxfmt": "^0.58.0",
     "oxlint": "^1.74.0",
     "typescript": "^7.0.2",
-    "vitest": "^4.1.10"
+    "vitest": "^4.1.11"
   },
   "keywords": [],
   "license": "MIT",
